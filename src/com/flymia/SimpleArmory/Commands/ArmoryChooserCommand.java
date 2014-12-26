@@ -40,41 +40,41 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				
 				ItemMeta rainbowMeta = rainBowArmory.getItemMeta();
 				rainbowMeta.setLore(this.plugin.desc);
-				rainbowMeta.setDisplayName("§a§L Rainbow armory");
+				rainbowMeta.setDisplayName("Â§aÂ§L Rainbow armory");
 				rainBowArmory.setItemMeta(rainbowMeta);
 							
 				ItemMeta leatherMeta = leatherArmory.getItemMeta();
 				leatherMeta.setLore(this.plugin.leatherDesc);
-				leatherMeta.setDisplayName("§a§L Leather armory");
+				leatherMeta.setDisplayName("Â§aÂ§L Leather armory");
 				leatherArmory.setItemMeta(leatherMeta);
 				
 				ItemMeta ironMeta = ironArmory.getItemMeta();
 				ironMeta.setLore(this.plugin.ironDesc);
-				ironMeta.setDisplayName("§a§L Iron armory");
+				ironMeta.setDisplayName("Â§aÂ§L Iron armory");
 				ironArmory.setItemMeta(ironMeta);
 				
 				ItemMeta goldMeta = goldArmory.getItemMeta();
 				goldMeta.setLore(this.plugin.goldDesc);
-				goldMeta.setDisplayName("§a§L Gold armory");
+				goldMeta.setDisplayName("Â§aÂ§L Gold armory");
 				goldArmory.setItemMeta(goldMeta);
 				
 				
 				ItemMeta diamondMeta = diamondArmory.getItemMeta();
 				diamondMeta.setLore(this.plugin.diamondDesc);
-				diamondMeta.setDisplayName("§a§L Diamond armory");
+				diamondMeta.setDisplayName("Â§aÂ§L Diamond armory");
 				diamondArmory.setItemMeta(diamondMeta);
 				
 				ItemMeta chainMeta = chainArmory.getItemMeta();
 				chainMeta.setLore(this.plugin.chainDesc);
-				chainMeta.setDisplayName("§a§L Chain armory");
+				chainMeta.setDisplayName("Â§aÂ§L Chain armory");
 				chainArmory.setItemMeta(chainMeta);
 				
 				ItemMeta menuEndItemMeta = endMenuItem.getItemMeta();
 				menuEndItemMeta.setLore(this.plugin.endDesc);
-				menuEndItemMeta.setDisplayName("§a§O Menu closer");
+				menuEndItemMeta.setDisplayName("Â§aÂ§O Menu closer");
 				endMenuItem.setItemMeta(menuEndItemMeta);
 				
-				plugin.inv = p.getServer().createInventory(null, 9, "§3§O Choose your armory!");
+				plugin.inv = p.getServer().createInventory(null, 9, "Â§3Â§O Choose your armory!");
 				plugin.inv.setItem(0, leatherArmory);
 				plugin.inv.setItem(1, ironArmory);
 				plugin.inv.setItem(2, goldArmory);

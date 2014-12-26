@@ -28,7 +28,7 @@ public class SimpleArmory extends JavaPlugin {
 	 * @author flymia
 	 */
 	
-	public static String prefix = "ง3[SimpleArmory]งa ";
+	public static String prefix = "ยง3[SimpleArmory]ยงa ";
 	public Inventory inv;
 	public List<String> desc = new ArrayList<String>();
 	public List<String> leatherDesc = new ArrayList<String>();

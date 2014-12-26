@@ -18,7 +18,7 @@ public class InventoryListener implements Listener {
 	public void onInvClick(InventoryClickEvent e){
 		Player p = (Player) e.getWhoClicked();
 		
-		if(e.getInventory().getName().equalsIgnoreCase("ง3งO Choose your armory!")){
+		if(e.getInventory().getName().equalsIgnoreCase("ยง3ยงO Choose your armory!")){
 			e.setCancelled(true);
 			if(e.getCurrentItem().getType() == Material.LEATHER_CHESTPLATE){
 				

@@ -1,6 +1,6 @@
 name: SimpleArmory
 author: flymia
-version: 1.4.9
+version: 1.5.0
 main: com.flymia.SimpleArmory.main.SimpleArmory
 
 commands:
@@ -8,27 +8,32 @@ commands:
          usage: /givearmory <armorytype>
          description: Allows you to give a armory-package.
          default: op
+         aliases: ga
      simplearmory:
          usage: /simplearmory <reloadconfig>
          description: Allows you too see the version and more.
          default: op
-         aliases: /sa
+         aliases: sa
      fightpack:
          usage: /fightpack <fightpack>
          description: This will come in 1.5!
          default: op
+         aliases: fp
      choosearmory:
          usage: /choosearmory
          description: Choose an armory with a gui.
          default: op
+         aliases: ca
      cleararmory:
          usage: /cleararmory
          description: Clear your armory.
          default: op
+         aliases: cleara
      sendarmory:
          usage: /sendarmory <type> <player>
          description: Sends a Player a specified armory.
          default: op
+         aliases: senda
 permissions:
      simplearmory.givearmory:
          default: op

@@ -42,7 +42,17 @@ public class AdminSimpleArmory implements CommandExecutor {
 					p.sendMessage(SimpleArmory.prefix + "You are not allowed to do this!");
 					return true;
 				}
-					
+			}else if(args.length == 1 && args[0].equalsIgnoreCase("help")){
+				
+				if(p.hasPermission("simplearmory.admin")){	
+					p.sendMessage(SimpleArmory.prefix + "If you want to get advanced help in the plugin, you should go to my github page: github.com/flymia");
+					p.sendMessage(SimpleArmory.prefix + "You'll find a wiki on this page! Have a look!");
+					return true;
+				}else{
+					p.sendMessage(SimpleArmory.prefix + "You are not allowed to do this!");
+					return true;
+				}
+				
 			
 				
 			}else{
