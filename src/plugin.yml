@@ -1,0 +1,56 @@
+name: SimpleArmory
+author: flymia
+version: 1.4.9
+main: com.flymia.SimpleArmory.main.SimpleArmory
+
+commands:
+     givearmory:
+         usage: /givearmory <armorytype>
+         description: Allows you to give a armory-package.
+         default: op
+     simplearmory:
+         usage: /simplearmory <reloadconfig>
+         description: Allows you too see the version and more.
+         default: op
+         aliases: /sa
+     fightpack:
+         usage: /fightpack <fightpack>
+         description: This will come in 1.5!
+         default: op
+     choosearmory:
+         usage: /choosearmory
+         description: Choose an armory with a gui.
+         default: op
+     cleararmory:
+         usage: /cleararmory
+         description: Clear your armory.
+         default: op
+     sendarmory:
+         usage: /sendarmory <type> <player>
+         description: Sends a Player a specified armory.
+         default: op
+permissions:
+     simplearmory.givearmory:
+         default: op
+     simplearmory.about:
+         default: op
+     simplearmory.sendleather:
+         default: op
+     simplearmory.sendiron:
+         default: op
+     simplearmory.sendchain:
+         default: op
+     simplearmory.sendgold:
+         default: op
+     simplearmory.senddiamond:
+         default: op
+     simplearmory.sendrainbow:
+         default: op
+     simplearmory.fightpacks:
+         default: op
+     simplearmory.choosearmory:
+         default: op
+     simplearmory.cleararmory:
+         default: op
+     simplearmory.sendarmory:
+         default: op
