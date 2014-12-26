@@ -13,6 +13,8 @@ import com.flymia.SimpleArmory.main.SimpleArmory;
 
 public class SendArmoryCommand implements CommandExecutor{
 	
+	//TEST
+	
 	SimpleArmory plugin;
 	
 	public SendArmoryCommand(SimpleArmory plugin){
