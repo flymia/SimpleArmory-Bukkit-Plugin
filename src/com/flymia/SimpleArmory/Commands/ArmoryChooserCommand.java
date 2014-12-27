@@ -13,7 +13,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import com.flymia.SimpleArmory.main.SimpleArmory;
 
 public class ArmoryChooserCommand implements CommandExecutor {
-//
+	
+	//Normale Editiotn
 	
 	public ItemStack leatherArmory = new ItemStack(Material.LEATHER_CHESTPLATE);
 	public ItemStack ironArmory = new ItemStack(Material.IRON_CHESTPLATE);
@@ -22,7 +23,16 @@ public class ArmoryChooserCommand implements CommandExecutor {
 	public ItemStack chainArmory = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 	public ItemStack rainBowArmory = new ItemStack(Material.MAGMA_CREAM);
 	public ItemStack endMenuItem = new ItemStack(Material.REDSTONE_BLOCK);
-	//INIT TEST
+	
+	
+	//SPECIAL EDITIONS!
+	
+	public ItemStack leatherSpecial = new ItemStack(Material.LEATHER_CHESTPLATE);
+	public ItemStack ironSpecial = new ItemStack(Material.IRON_CHESTPLATE);
+	public ItemStack goldSpecial = new ItemStack(Material.GOLD_CHESTPLATE);
+	public ItemStack diamondSpecial = new ItemStack(Material.DIAMOND_CHESTPLATE);
+	public ItemStack chainSpecial = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
+	
 	
 	SimpleArmory plugin;
 	
@@ -47,6 +57,11 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				leatherMeta.setLore(this.plugin.leatherDesc);
 				leatherMeta.setDisplayName("§a§L Leather armory");
 				leatherArmory.setItemMeta(leatherMeta);
+				
+				ItemMeta leatherMetaSpecial = leatherSpecial.getItemMeta();
+				leatherMetaSpecial.setLore(this.plugin.leatherSpecialDesc);
+				leatherMetaSpecial.setDisplayName("§4§L Special Leather Armroy");
+				leatherSpecial.setItemMeta(leatherMetaSpecial);
 				
 				ItemMeta ironMeta = ironArmory.getItemMeta();
 				ironMeta.setLore(this.plugin.ironDesc);
@@ -78,10 +93,13 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				plugin.inv.setItem(0, leatherArmory);
 				plugin.inv.setItem(1, ironArmory);
 				plugin.inv.setItem(2, goldArmory);
+				
 				plugin.inv.setItem(3, diamondArmory);
 				plugin.inv.setItem(4, chainArmory);
 				plugin.inv.setItem(5, rainBowArmory);
 				plugin.inv.setItem(8, endMenuItem);
+				
+			//	plugin.inv.setItem(9, leatherSpecial);
 				
 				p1.openInventory(plugin.inv);
 				

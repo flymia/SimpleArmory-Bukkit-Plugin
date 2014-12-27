@@ -19,9 +19,9 @@ public class SignEvent implements Listener {
 	@EventHandler
 	public void onSignChangeEvent(SignChangeEvent e){
 		if(e.getLine(0).equalsIgnoreCase("[SA]") && e.getLine(1).equalsIgnoreCase("[L]")){
-			e.setLine(0, "§a[SimpleArmory]");
-			e.setLine(1, "§bGive §9leather");
-			e.setLine(1, "§barmory!");
+			e.setLine(0, "Â§a[SimpleArmory]");
+			e.setLine(1, "Â§bGive Â§9leather");
+			e.setLine(1, "Â§barmory!");
 		}
 	}
 	

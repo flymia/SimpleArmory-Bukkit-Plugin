@@ -39,7 +39,7 @@ public class FightpacksCommand implements CommandExecutor{
 				ItemMeta specialBow = specialBowS.getItemMeta();
 				ItemMeta superSwordM = superSword.getItemMeta();
 				
-				specialBow.setDisplayName("§a§L Bowmonster!");
+				specialBow.setDisplayName("Â§aÂ§L Bowmonster!");
 				specialBowS.setItemMeta(specialBow);
 				specialBowS.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 5);
 				specialBowS.addUnsafeEnchantment(Enchantment.ARROW_FIRE, 1);
@@ -47,7 +47,7 @@ public class FightpacksCommand implements CommandExecutor{
 				specialBowS.addUnsafeEnchantment(Enchantment.ARROW_KNOCKBACK , 2);
 				specialBowS.addUnsafeEnchantment(Enchantment.DURABILITY, 3);
 				
-				superSwordM.setDisplayName("§a§L Supersword!");
+				superSwordM.setDisplayName("Â§aÂ§L Supersword!");
 				superSword.setItemMeta(superSwordM);
 				superSword.addEnchantment(Enchantment.DAMAGE_ALL, 5);
 				superSword.addEnchantment(Enchantment.DURABILITY, 3);

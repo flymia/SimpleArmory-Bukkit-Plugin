@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.milkbowl.vault.economy.Economy;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.PluginManager;
@@ -37,7 +36,9 @@ public class SimpleArmory extends JavaPlugin {
 	public List<String> diamondDesc = new ArrayList<String>();
 	public List<String> chainDesc = new ArrayList<String>();
 	public List<String> endDesc = new ArrayList<String>();
-	public static Economy economy = null;
+	
+	public List<String> leatherSpecialDesc = new ArrayList<String>();
+	
 	private ConfigManager cm = null;
 	
 	
@@ -83,6 +84,8 @@ public class SimpleArmory extends JavaPlugin {
 		diamondDesc.add("Gives you diamond armory!");
 		chainDesc.add("Gives you chain armory!");
 		endDesc.add("Closes the menu.");
+		
+		leatherSpecialDesc.add("§3Gives you the SPECIAL LEATHER ARMORY!");
 	}
 	
 	public void registerEvents(){
@@ -91,14 +94,5 @@ public class SimpleArmory extends JavaPlugin {
 		pm.registerEvents(new SignEvent(), this);
 	}
 	
-	private boolean setupEconomy()
-    {
-        RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
-        if (economyProvider != null) {
-            economy = economyProvider.getProvider();
-        }
-
-        return (economy != null);
-    }
 	
 }
