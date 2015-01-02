@@ -1,6 +1,6 @@
 name: SimpleArmory
 author: flymia
-version: 1.5.1
+version: 1.5.2
 main: com.flymia.SimpleArmory.main.SimpleArmory
 
 commands:

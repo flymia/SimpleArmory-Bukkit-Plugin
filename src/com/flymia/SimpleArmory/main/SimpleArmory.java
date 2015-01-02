@@ -36,7 +36,7 @@ public class SimpleArmory extends JavaPlugin {
 	public List<String> diamondDesc = new ArrayList<String>();
 	public List<String> chainDesc = new ArrayList<String>();
 	public List<String> endDesc = new ArrayList<String>();
-	
+	public List<String> removeDesc = new ArrayList<String>();
 	public List<String> leatherSpecialDesc = new ArrayList<String>();
 	
 	private ConfigManager cm = null;
@@ -84,6 +84,7 @@ public class SimpleArmory extends JavaPlugin {
 		diamondDesc.add("Gives you diamond armory!");
 		chainDesc.add("Gives you chain armory!");
 		endDesc.add("Closes the menu.");
+		removeDesc.add("Removes the armor.");
 		
 		leatherSpecialDesc.add("§3Gives you the SPECIAL LEATHER ARMORY!");
 	}

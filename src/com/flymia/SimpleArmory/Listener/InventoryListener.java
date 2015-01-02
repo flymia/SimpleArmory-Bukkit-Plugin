@@ -5,6 +5,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryInteractEvent;
+import org.bukkit.event.inventory.InventoryMoveItemEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.flymia.SimpleArmory.Commands.ArmoryChooserCommand;
@@ -18,7 +21,7 @@ public class InventoryListener implements Listener {
 	public void onInvClick(InventoryClickEvent e){
 		Player p = (Player) e.getWhoClicked();
 		
-		if(e.getInventory().getName().equalsIgnoreCase("§3§O Choose your armory!")){
+		if(e.getInventory().getName().equalsIgnoreCase("§3§O‚Choose your armory!")){
 			e.setCancelled(true);
 			if(e.getCurrentItem().getType() == Material.LEATHER_CHESTPLATE){
 				
@@ -29,7 +32,6 @@ public class InventoryListener implements Listener {
 				p.closeInventory();
 				
 				p.sendMessage(SimpleArmory.prefix + "You have been given a leather armory through the menu!");
-				
 			}else if(e.getCurrentItem().getType() == Material.IRON_CHESTPLATE){
 				
 				p.getInventory().setHelmet(new ItemStack(Material.IRON_HELMET));
@@ -77,10 +79,22 @@ public class InventoryListener implements Listener {
 			}else if(e.getCurrentItem().getType() == Material.REDSTONE_BLOCK){
 				p.closeInventory();
 				p.sendMessage(SimpleArmory.prefix + "Menu closed.");
+			
+			
+		}else if(e.getCurrentItem().getType() == Material.ARROW){
+			
+			p.getInventory().setHelmet(new ItemStack(Material.AIR));
+			p.getInventory().setChestplate(new ItemStack(Material.AIR));
+			p.getInventory().setLeggings(new ItemStack(Material.AIR));
+			p.getInventory().setBoots(new ItemStack(Material.AIR));
+			p.closeInventory();
+			p.sendMessage(SimpleArmory.prefix + "Armor removed!");	
+		
+			
 			}else if(e.getCurrentItem().getType() == null){
 				return;
-			}
-			
+			}	
 		}
-	}	
+	}
+	
 }

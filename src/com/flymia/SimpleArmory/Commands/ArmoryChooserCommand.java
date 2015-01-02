@@ -23,15 +23,7 @@ public class ArmoryChooserCommand implements CommandExecutor {
 	public ItemStack chainArmory = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
 	public ItemStack rainBowArmory = new ItemStack(Material.MAGMA_CREAM);
 	public ItemStack endMenuItem = new ItemStack(Material.REDSTONE_BLOCK);
-	
-	
-	//SPECIAL EDITIONS!
-	
-	public ItemStack leatherSpecial = new ItemStack(Material.LEATHER_CHESTPLATE);
-	public ItemStack ironSpecial = new ItemStack(Material.IRON_CHESTPLATE);
-	public ItemStack goldSpecial = new ItemStack(Material.GOLD_CHESTPLATE);
-	public ItemStack diamondSpecial = new ItemStack(Material.DIAMOND_CHESTPLATE);
-	public ItemStack chainSpecial = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
+	public ItemStack removeItem = new ItemStack(Material.ARROW);
 	
 	
 	SimpleArmory plugin;
@@ -47,6 +39,10 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				Player p1 = (Player) p;
 				//Itemstacks to put into the inventory (to set the armory)
 
+				ItemMeta clearMeta = removeItem.getItemMeta();
+				clearMeta.setLore(this.plugin.removeDesc);
+				clearMeta.setDisplayName("§4§L Armor remover");
+				removeItem.setItemMeta(clearMeta);
 				
 				ItemMeta rainbowMeta = rainBowArmory.getItemMeta();
 				rainbowMeta.setLore(this.plugin.desc);
@@ -58,11 +54,7 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				leatherMeta.setDisplayName("§a§L Leather armory");
 				leatherArmory.setItemMeta(leatherMeta);
 				
-				ItemMeta leatherMetaSpecial = leatherSpecial.getItemMeta();
-				leatherMetaSpecial.setLore(this.plugin.leatherSpecialDesc);
-				leatherMetaSpecial.setDisplayName("§4§L Special Leather Armroy");
-				leatherSpecial.setItemMeta(leatherMetaSpecial);
-				
+			
 				ItemMeta ironMeta = ironArmory.getItemMeta();
 				ironMeta.setLore(this.plugin.ironDesc);
 				ironMeta.setDisplayName("§a§L Iron armory");
@@ -89,17 +81,17 @@ public class ArmoryChooserCommand implements CommandExecutor {
 				menuEndItemMeta.setDisplayName("§a§O Menu closer");
 				endMenuItem.setItemMeta(menuEndItemMeta);
 				
-				plugin.inv = p.getServer().createInventory(null, 9, "§3§O Choose your armory!");
+				plugin.inv = p.getServer().createInventory(null, 9, "§3§OChoose your armory!");
 				plugin.inv.setItem(0, leatherArmory);
 				plugin.inv.setItem(1, ironArmory);
 				plugin.inv.setItem(2, goldArmory);
-				
 				plugin.inv.setItem(3, diamondArmory);
 				plugin.inv.setItem(4, chainArmory);
 				plugin.inv.setItem(5, rainBowArmory);
+				plugin.inv.setItem(6, removeItem);
+				
 				plugin.inv.setItem(8, endMenuItem);
 				
-			//	plugin.inv.setItem(9, leatherSpecial);
 				
 				p1.openInventory(plugin.inv);
 				
